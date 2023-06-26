@@ -13,7 +13,7 @@ export default function () {
 
   async function getConsumo(id) {
     try {
-      const response = await axios.get(`http://localhost:5432/motos/${id}`);
+      const response = await axios.get(`https://api-ib-entrega.vercel.app/motos/${id}`);
       setConsumo(response.data[0].consumo);
     } catch (error) {
       console.log(error);
@@ -23,7 +23,7 @@ export default function () {
   useEffect(() => {
     const getMotos = async () => {
       try {
-        const response = await axios.get("http://localhost:5432/motos");
+        const response = await axios.get("https://api-ib-entrega.vercel.app/motos");
         setMotos(response.data);
       } catch (error) {
         console.log(error);
@@ -34,10 +34,21 @@ export default function () {
 
   function calculaEntrega() {
     let seguro, manutencao, oleo, gasolina, lucro, custov, custotempo, total;
+    if(consumo <= 0){
+      console.log("opção nao selecionada");
+      document.getElementById("resp").innerText =
+      "Favor selecionar uma opção válida.";
+    }else {
     if (parseFloat(distancia) > 0 && parseFloat(tempo) > 0) {
       seguro = 0.5;
       manutencao = 0.05 * parseFloat(distancia);
       oleo = 0.022 * parseFloat(distancia) * 2;
+      if(consumo <= 0){
+        console.log("opção nao selecionada");
+        document.getElementById("resp").innerText =
+        "Favor selecionar uma opção válida.";
+        setResp(0);
+      }
       gasolina = (parseFloat(distancia) / consumo) * 4.95;
       lucro = 0.5 * parseFloat(distancia);
       custov = parseFloat(distancia) * 0.022 + parseFloat(distancia) * 0.193;
@@ -59,10 +70,13 @@ export default function () {
       total =
         seguro + manutencao + oleo + gasolina + lucro + custov + custotempo;
       setResp(total.toFixed(2));
+      document.getElementById("resp").innerText =
+      "Valor da corrida: " + resp;
     } else {
       document.getElementById("resp").innerText =
         "Favor digitar um valor válido. ";
     }
+  }
   }
 
   return (
