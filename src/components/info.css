@@ -1,0 +1,92 @@
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  top: 50%;
+  flex-wrap: wrap;
+}
+@media all and (min-width: 390px) and (max-width: 1204px) {
+  #info {
+    align-content: space-around;
+  }
+}
+
+#bolinha-moto {
+  position: relative;
+  max-width: 90%;
+  margin-right: 7%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  top: 100%;
+}
+@media all and (min-width: 390px) and (max-width: 1204px) {
+  #bolinha-moto {
+    margin: 0;
+    margin-bottom: 2%;
+  }
+}
+@media (max-width: 600px) {
+  #bolinha-moto {
+    display: none;
+  }
+}
+
+.text {
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 37px;
+  justify-content: flex-start;
+  margin: 8%;
+
+  max-width: 40%;
+  text-align: center;
+  color: #ffffff;
+}
+@media all and (min-width: 390px) and (max-width: 1204px) {
+  .text {
+    font-size: 30px;
+    max-width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .text {
+    font-size: 25px;
+    max-width: 100%;
+  }
+}
+#description {
+  flex-wrap: wrap-reverse;
+  position: relative;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+@media all and (min-width: 390px) and (max-width: 1204px) {
+  #description {
+    justify-content: space-around;
+  }
+}
+
+#motodinheiro {
+  position: relative;
+  max-width: 90%;
+  margin-right: 7%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  top: 100%;
+}
+@media all and (min-width: 390px) and (max-width: 1204px) {
+  #motodinheiro {
+    margin: 0;
+    margin-bottom: 2%;
+  }
+}
+@media (max-width: 600px) {
+  #motodinheiro {
+    display: none;
+  }
+}

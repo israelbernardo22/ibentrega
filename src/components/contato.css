@@ -1,0 +1,25 @@
+#contato {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-left: 0px;
+  margin-bottom: 0;
+}
+
+.iconContato {
+  height: 50px;
+}
+#containerIconContatos {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.textContato {
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 37px;
+  text-align: center;
+  width: 100%;
+}

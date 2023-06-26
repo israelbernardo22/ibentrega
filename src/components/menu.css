@@ -1,0 +1,79 @@
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  background: #ffffff;
+}
+#IB-Logo {
+  position: relative;
+  height: 7.5rem;
+}
+@media (max-width: 600px) {
+  #IB-Logo {
+    height: 4rem;
+  }
+}
+
+#motivacional {
+  font-family: "montserrat", sans-serif;
+  font-weight: 600;
+  color: #8c8c8c;
+  font-size: 1.89rem;
+  text-align: center;
+}
+@media screen and (max-width: 816px) {
+  #motivacional {
+    display: none;
+  }
+  #botoes {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 3%;
+  }
+}
+
+#botoes {
+  display: flex;
+  flex-direction: row;
+  margin: 3%;
+}
+@media screen and (max-width: 356px) {
+  #botoes {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+  }
+}
+@media screen and (min-width: 356px) and (max-width: 815px) {
+  #botoes {
+    display: flex;
+    flex-direction: row;
+    margin-right: 3%;
+  }
+}
+@media all and (min-width: 816px) and (max-width: 1204px) {
+  #botoes {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+  }
+}
+
+.botoesmenu {
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #3e3e3e;
+  margin: 5px;
+  font-size: 15px;
+  border: 0;
+  text-decoration: none;
+}
+.botoesmenu:hover {
+  background-color: #3e3e3e;
+  color: white;
+  cursor: pointer;
+  border-radius: 1px;
+}
