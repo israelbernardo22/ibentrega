@@ -18,7 +18,7 @@ export default function () {
       </div>
 
       <div id="description">
-        <img src={motoInfo} />
+        <img id="motodinheiro" src={motoInfo} />
         <p className="text" id="text_description">
           Chega de dificuldade para calcular o preço de suas entregas. Com
           IB-Entrega, é possível realizar a precificação com facilidade,

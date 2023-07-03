@@ -74,7 +74,7 @@ select {
 }
 @media (max-width: 600px) {
   #iconDinheiro {
-    display: none;
+    size-adjust: 75%;
   }
 }
 
@@ -88,11 +88,6 @@ select {
     margin: 5%;
     font-size: 25px;
     max-width: 100%;
-  }
-}
-@media all and (max-width: 380){
-  .text_quant{
-    /* font-size: ; */
   }
 }
 

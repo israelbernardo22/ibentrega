@@ -9,13 +9,12 @@
   #info {
     align-content: space-around;
   }
-} @media all and (max-width: 390px) {
+} @media all and (max-width: 600px) {
   #text_sobre{
     display: none;
   }
   
 }
-
 #bolinha-moto {
   position: relative;
   max-width: 90%;
@@ -26,6 +25,10 @@
     margin: 0;
     margin-bottom: 2%;
   }
+} @media (max-width: 600px){
+  #bolinha-moto {
+    display: none;
+}
 }
 
 .text {
@@ -65,16 +68,12 @@
 @media all and (min-width: 390px) and (max-width: 1204px) {
   #description {
     justify-content: space-around;
+    margin: 0
   }
 }
-
 #motodinheiro {
   position: relative;
   max-width: 90%;
-  margin-right: 7%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  top: 100%;
 }
 @media all and (min-width: 390px) and (max-width: 1204px) {
   #motodinheiro {
@@ -84,6 +83,6 @@
 }
 @media (max-width: 600px) {
   #motodinheiro {
-    display: none;
+    size-adjust: 75%;
   }
 }
