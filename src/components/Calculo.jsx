@@ -9,12 +9,15 @@ export default function () {
   const [tempo, setTempo] = useState("");
   const [resp, setResp] = useState("");
   const [motos, setMotos] = useState([]);
-  const [consumo, setConsumo] = useState([]);
+  const [consumo, setConsumo] = useState(0);
 
-  async function getConsumo(id) {
+  async function getConsumo(cod) {
     try {
-      const response = await axios.get(`https://api-ib-entrega.vercel.app/motos/${id}`);
-      setConsumo(response.data[0].consumo);
+      console.log(cod);
+      const temp = motos.find( (x) => x.id == cod );
+      console.log(temp);
+      setConsumo(temp.consumo);
+      console.log(temp.consumo);
     } catch (error) {
       console.log(error);
     }
@@ -49,6 +52,7 @@ export default function () {
         "Favor selecionar uma opção válida.";
         setResp(0);
       }
+      console.log(consumo);
       gasolina = (parseFloat(distancia) / consumo) * 4.95;
       lucro = 0.5 * parseFloat(distancia);
       custov = parseFloat(distancia) * 0.022 + parseFloat(distancia) * 0.193;
@@ -69,9 +73,7 @@ export default function () {
 
       total =
         seguro + manutencao + oleo + gasolina + lucro + custov + custotempo;
-      setResp(total.toFixed(2));
-      document.getElementById("resp").innerText =
-      "Valor da corrida: " + resp;
+      setResp(total.toFixed(2) + " R$");
     } else {
       document.getElementById("resp").innerText =
         "Favor digitar um valor válido. ";
@@ -82,8 +84,8 @@ export default function () {
   return (
     <div>
       <div id="calculo">
-        <div className="formulario_calculo">
-          <p>Informe seu veiculo:</p>
+        <div id="formulario_calculo">
+          <p className="text_quant">Informe seu veiculo:</p>
           <select
             name="select"
             title={consumo}
@@ -96,16 +98,16 @@ export default function () {
               </option>
             ))}
           </select>
-          <p>
-            Informe a quantidade (em <b>KM</b>): <br />
+          <p className="text_quant">
+            Informe a quantidade (em KM):
           </p>
           <input
             type="number"
             placeholder="Digite a distancia a ser percorrida"
             onChange={(e) => setDistancia(e.target.value)}
           />
-          <p>
-            Informe o tempo para esta entrega (em <b>MINUTOS</b>):{" "}
+          <p className="text_quant">
+            Informe o tempo para esta entrega (em MINUTOS):
           </p>
           <input
             type="number"
@@ -119,7 +121,7 @@ export default function () {
           >
             Calcular
           </button>
-          <p id="resp">Valor da corrida: {resp}</p>
+          <p id="resp">{"Valor da corrida: " + resp }</p>
         </div>
         <img src={dinheiro} alt="Icone de Dinheiro" id="iconDinheiro" />
       </div>

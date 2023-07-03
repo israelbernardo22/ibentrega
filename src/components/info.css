@@ -1,23 +1,24 @@
 #info {
   display: flex;
-  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  top: 50%;
+  justify-content: space-around;  
   flex-wrap: wrap;
+  margin-top: 5rem;
 }
 @media all and (min-width: 390px) and (max-width: 1204px) {
   #info {
     align-content: space-around;
   }
+} @media all and (max-width: 390px) {
+  #text_sobre{
+    display: none;
+  }
+  
 }
 
 #bolinha-moto {
   position: relative;
   max-width: 90%;
-  margin-right: 7%;
-  margin-top: 5%;
-  margin-bottom: 5%;
   top: 100%;
 }
 @media all and (min-width: 390px) and (max-width: 1204px) {
@@ -33,11 +34,11 @@
 }
 
 .text {
-  font-family: "montserrat", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 600;
   font-size: 37px;
   justify-content: flex-start;
-  margin: 8%;
+  margin: 10px;
 
   max-width: 40%;
   text-align: center;
@@ -58,12 +59,13 @@
 #description {
   flex-wrap: wrap-reverse;
   position: relative;
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 @media all and (min-width: 390px) and (max-width: 1204px) {
   #description {
