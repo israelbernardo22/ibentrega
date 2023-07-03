@@ -27,11 +27,6 @@
     margin-bottom: 2%;
   }
 }
-@media (max-width: 600px) {
-  #bolinha-moto {
-    display: none;
-  }
-}
 
 .text {
   font-family: 'Times New Roman', Times, serif;
