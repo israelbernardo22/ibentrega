@@ -4,8 +4,6 @@
   align-items: center;
   position: relative;
   width: 100%;
-
-  background: #ffffff;
 }
 #IB-Logo {
   position: relative;
@@ -20,7 +18,7 @@
 #motivacional {
   font-family: "montserrat", sans-serif;
   font-weight: 600;
-  color: #8c8c8c;
+  color: #8257E5;
   font-size: 1.89rem;
   text-align: center;
 }
@@ -28,13 +26,13 @@
   #motivacional {
     display: none;
   }
+
   #botoes {
     display: flex;
     flex-direction: row-reverse;
     margin-right: 3%;
   }
 }
-
 #botoes {
   display: flex;
   flex-direction: row;
@@ -65,14 +63,14 @@
 .botoesmenu {
   box-sizing: border-box;
   background-color: transparent;
-  color: #3e3e3e;
+  color: #8257E5;
   margin: 5px;
   font-size: 15px;
   border: 0;
   text-decoration: none;
 }
 .botoesmenu:hover {
-  background-color: #3e3e3e;
+  background-color: #8257E5;
   color: white;
   cursor: pointer;
   border-radius: 1px;

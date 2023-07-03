@@ -1,76 +1,59 @@
-.formulario_calculo {
+#formulario_calculo {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  font-family: "montserrat", sans-serif;
-  font-style: normal;
-  font-size: 32px;
-  text-align: center;
-  color: #ffffff;
-  max-width: 45%;
-}
-#btnCalcula {
-  font-family: "montserrat", sans-serif;
-  box-sizing: border-box;
+  justify-content: flex-start;
+  padding: 0.938rem;
+
+  color: black;
   background-color: white;
-  color: #3e3e3e;
+  ;
+  border-radius: 10px;
+} 
+#btnCalcula {
+  font-family:'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  background-color: black;
+  color: #8257E5;
   width: 7.69rem;
-  height: 40px;
-  position: relative;
+  height: 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: 20px;
 }
 
 #btnCalcula:hover {
-  font-family: "montserrat", sans-serif;
-  box-sizing: border-box;
-  background-color: #3e3e3e;
+  background-color: #8257E5;
   color: white;
-  width: 123px;
-  height: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  cursor: pointer;
+  border-color: black;
 }
 
 input {
   border-radius: 5px;
-  width: 50%;
+  width: 80%;
   height: 20px;
   margin: 10px;
 }
-@media (max-width: 600px) {
-  input {
-    border-radius: 5px;
-    width: 150px;
-    height: 20px;
-  }
+input::placeholder{
+  padding-left: 5px;
+  font-size: 10px;
 }
 
 select {
   border-radius: 5px;
-  width: 50%;
+  width: 80%;
   height: 20px;
   margin: 10px;
 }
-@media (max-width: 600px) {
-  select {
-    border-radius: 5px;
-    width: 150px;
-    height: 20px;
-  }
-}
+
 
 #calculo {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 20px;
 }
 @media all and (min-width: 390px) and (max-width: 1204px) {
   #calculo {
@@ -81,10 +64,7 @@ select {
 #iconDinheiro {
   position: relative;
   max-width: 90%;
-  margin-right: 7%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  top: 100%;
+  
 }
 @media all and (min-width: 390px) and (max-width: 1204px) {
   #iconDinheiro {
@@ -110,37 +90,10 @@ select {
     max-width: 100%;
   }
 }
-#contato {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 0px;
-  margin-bottom: 0;
-}
-
-.iconContato {
-  height: 50px;
-}
-#containerIconContatos {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 10px;
-}
-.textContato {
-  font-family: "montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 37px;
-  text-align: center;
-  width: 100%;
-}
-#containerLinks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 1%;
+@media all and (max-width: 380){
+  .text_quant{
+    /* font-size: ; */
+  }
 }
 
 .textExpl {
@@ -162,4 +115,8 @@ select {
 }
 #mockoup {
   width: 50%;
+}
+#resp{
+  font-size: 25px;
+
 }

@@ -9,9 +9,7 @@ export default function () {
   return (
     <div>
       <div id="contato">
-        <div className="textContato">
-          <p> Contato!</p>
-        </div>
+          <h1 className="textContato"> Contato!</h1>
         <div id="containerIconContatos">
           <a
             href="https://www.linkedin.com/in/israel-bernardo-36b97b204"
@@ -38,7 +36,7 @@ export default function () {
           >
             Acesse o mockup no figma
           </a>
-          <p>Desenvolvido por: Israel Bernardo.</p>
+          <p className="textContato">Desenvolvido por: Israel Bernardo.</p>
         </div>
       </div>
     </div>

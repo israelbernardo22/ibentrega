@@ -8,10 +8,12 @@ import Contato from "./components/Contato";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <browserRouter>
     <Menu />
+    <routes>
     <Info />
     <Calculo />
     <Contato />
-  </React.StrictMode>
+  </routes>
+    </browserRouter>
 );
